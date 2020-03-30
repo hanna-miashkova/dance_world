@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register!{% endblock %}
+
+{% block body %}
+    <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto form p-4">
+        <h1 class="display-4 py-2 text-truncate text-center">Zarejestruj się</h1>
+        <div class="px-2">
+            {# todo - replace with a Symfony form! #}
+            <form class="form-signin" method="post">
+
+                <div class="form-group">
+                    <label for="inputEmail" class="sr-only">Nazwa użytkownika:</label>
+                    <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Nazwa użytkownika" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Hasło:</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Hasło" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword2" class="sr-only">Powtórz hasło:</label>
+                    <input type="password" name="password" id="inputPassword2" class="form-control" placeholder="Powtórz hasło" required>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me" required> Akceptuję warunki strony
+                    </label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Zarejestruj mnie
+                </button>
+
+                <div class="mb-3 text-center">
+                    Masz już konto?  <a href="{{ path('app_login') }}">Zaloguj się!</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
