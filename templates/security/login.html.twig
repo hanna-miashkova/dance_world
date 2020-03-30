@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto form p-4">
+                    <h1 class="display-4 py-2 text-truncate text-center">Zaloguj się</h1>
+                    <div class="px-2">
+                        <form method="post" class="justify-content-center">
+                            {% if error %}
+                                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+                            {% if app.user %}
+                                <div class="mb-3">
+                                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                </div>
+                            {% endif %}
+                            <div class="form-group">
+                                <label for="inputNazwa_uzytkownika" class="sr-only">Nazwa użytkownika:</label>
+                                <input type="text" value="{{ last_username }}"  placeholder="Nazwa użytkownika" name="nazwa_uzytkownika" id="inputNazwa_uzytkownika" class="form-control" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="sr-only">Hasło:</label>
+                                <input type="password" name="password" placeholder="Hasło" id="inputPassword" class="form-control"  required>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" name="_remember_me"> Zapamiętaj mnie
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block">Zaloguj</button>
+
+                            <div class="mb-3 text-center">
+                                Nie masz konta?  <a href="{{ path('app_register') }}">Zarejestruj się!</a>
+                            </div>
+                            <input type="hidden" name="_csrf_token"
+                                   value="{{ csrf_token('authenticate') }}"
+                            >
+                        </form>
+                    </div>
+                </div>
+{% endblock %}

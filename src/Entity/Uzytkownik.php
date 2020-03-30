@@ -3,10 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UzytkownikRepository")
+ * @UniqueEntity(fields={"nazwa_uzytkownika"}, message="There is already an account with this nazwa_uzytkownika")
  */
 class Uzytkownik implements UserInterface
 {
@@ -28,7 +30,8 @@ class Uzytkownik implements UserInterface
     private $roles = [];
 
     /**
-     * @ORM\Column(type="string", length=30)
+
+     * @ORM\Column(type="string", length=64)
      */
     private $haslo;
 
@@ -103,12 +106,12 @@ class Uzytkownik implements UserInterface
         // $this->plainPassword = null;
     }
 
-
-
     public function setHaslo(string $haslo): self
     {
         $this->haslo = $haslo;
 
         return $this;
     }
+
+
 }
