@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Uzytkownik;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -16,13 +18,9 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
 
-        // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
-        // last username entered by the user
+
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
@@ -38,18 +36,34 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/register", name="app_register")
-     * @param UserPasswordEncoderInterface $encoder
+     * @param Request $request
      * @return Response
      */
-    public function register(UserPasswordEncoderInterface $encoder)
+    public function register(Request $request)
     {
-        // whatever *your* User object is
-        $user = new Uzytkownik();
-        $plainPassword = 'ryanpass';
-        $encoded = $encoder->encodePassword($user, $plainPassword);
 
-        $user->setHaslo($encoded);
-            
+       if($request->isMethod(Request::METHOD_POST)){
+           try {
+               $user = new Uzytkownik();
+               $user->setImie($request->get('name'));
+               $user->setNazwaUzytkownika($request->get('login'));
+               $user->setHaslo($request->get('password'));
+               $user->setEmail($request->get('email'));
+               $user->setInfo($request->get('about'));
+               $user->setPlec($request->get('gender'));
+               $user->setZdjecie($request->get('photo'));
+               $em = $this->getDoctrine()->getManager();
+               $em->persist($user);
+               $em->flush();
+
+               $this->addFlash('welcome', 'Dziękujemy za rejestrację! Możesz się teraz zalogować ;) ');
+               return $this->redirectToRoute('start_page');
+
+           }catch(UniqueConstraintViolationException $ex){
+               $this->addFlash('error', 'Już istnieje taki użytkownik!');
+           }
+       }
+
         return $this->render('security/register.html.twig');
     }
 }

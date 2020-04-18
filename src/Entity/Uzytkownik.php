@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -34,6 +36,41 @@ class Uzytkownik implements UserInterface
      * @ORM\Column(type="string", length=64)
      */
     private $haslo;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Umiejetnosci")
+     */
+    private $umiejetnosci;
+
+    /**
+     * @ORM\Column(type="string", length=1000, nullable=true)
+     */
+    private $info;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $zdjecie;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $imie;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $plec;
+
+    public function __construct()
+    {
+        $this->umiejetnosci = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -109,6 +146,92 @@ class Uzytkownik implements UserInterface
     public function setHaslo(string $haslo): self
     {
         $this->haslo = $haslo;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Umiejetnosci[]
+     */
+    public function getUmiejetnosci(): Collection
+    {
+        return $this->umiejetnosci;
+    }
+
+    public function addUmiejetnosci(Umiejetnosci $umiejetnosci): self
+    {
+        if (!$this->umiejetnosci->contains($umiejetnosci)) {
+            $this->umiejetnosci[] = $umiejetnosci;
+        }
+
+        return $this;
+    }
+
+    public function removeUmiejetnosci(Umiejetnosci $umiejetnosci): self
+    {
+        if ($this->umiejetnosci->contains($umiejetnosci)) {
+            $this->umiejetnosci->removeElement($umiejetnosci);
+        }
+
+        return $this;
+    }
+
+    public function getInfo(): ?string
+    {
+        return $this->info;
+    }
+
+    public function setInfo(?string $info): self
+    {
+        $this->info = $info;
+
+        return $this;
+    }
+
+    public function getZdjecie(): ?string
+    {
+        return $this->zdjecie;
+    }
+
+    public function setZdjecie(?string $zdjecie): self
+    {
+        $this->zdjecie = $zdjecie;
+
+        return $this;
+    }
+
+    public function getImie(): ?string
+    {
+        return $this->imie;
+    }
+
+    public function setImie(string $imie): self
+    {
+        $this->imie = $imie;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getPlec(): ?string
+    {
+        return $this->plec;
+    }
+
+    public function setPlec(string $plec): self
+    {
+        $this->plec = $plec;
 
         return $this;
     }

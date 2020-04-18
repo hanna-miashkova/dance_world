@@ -2,6 +2,11 @@
 
 {% block body %}
 
+    {% for message in app.flashes('welcome') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
     <!--- Slider -->
     <div id="slides" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
