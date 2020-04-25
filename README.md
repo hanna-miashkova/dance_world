@@ -13,3 +13,4 @@ zajęcia 6: Skończono rejestrację użytkownika, dodano nowe pola i ograniczeni
 
 zajęcia 7: Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. 
 
+
