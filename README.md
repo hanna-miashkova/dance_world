@@ -11,6 +11,6 @@ zajęcia 5: Stworzono stronę logowania, dodano nowe opcje w menu widoczne po za
 
 zajęcia 6: Skończono rejestrację użytkownika, dodano nowe pola i ograniczenia. Zmiany możemy zobaczyć w "register.html.twig" i w SecurityController funkcja register. Zrobiono również panel użytkownika: zdjęcie, dane, umijętności które użytkownik może zmieniać i wybierać za pomocą popup. Templatka profil.html.twig oraz w MainPageController funkcja infoProfil.
 
-zajęcia 7: Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. 
+zajęcia 7: Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. Folder .idea został dodany do gitignore, ale nie wiem czemu nadal znajduje się w repozytorium. 
 
 
