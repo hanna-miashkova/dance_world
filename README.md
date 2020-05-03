@@ -13,4 +13,4 @@ zajęcia 6: Skończono rejestrację użytkownika, dodano nowe pola i ograniczeni
 
 zajęcia 7: Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. Folder .idea został dodany do gitignore, ale nie wiem czemu nadal znajduje się w repozytorium. 
 
-
+zajęcia 8: Wdrożenie aplikacji na Heroku. W projekcie baza danych MySQL przy użyciu dodatku JawsDB. Client - HeidiSQL. Link do aplikacji "https://gentle-everglades-53070.herokuapp.com/" 
