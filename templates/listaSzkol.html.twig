@@ -6,17 +6,18 @@
     <div>
         <p></p>
         <p>Tu się pojawią filtry na wyszukiwanie szkoły tańca ...</p>
-{#        <p>połączenie z tabelą miasto, co jeśli szkoła ma kilka miast, testy? </p>#}
     </div>
     <div class="list-group">
         {% for szkola in szkoly %}
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <a href="{{ path('szkola_info', {"id":szkola.id}) }}" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{ szkola.nazwaSzkoly }}</h5>
+                    <h5 class="mb-1" >{{ szkola.nazwaSzkoly }}</h5>
                                     <small class="text-muted">{{ szkola.miastoSzkoly.nazwaMiasta }}</small>
                 </div>
                 <p class="mb-1">{{ szkola.opisKrotki }}</p>
-                <small class="text-muted">Tu będą dostępne kategorie tańca szkoły</small>
+                {% for umiejetnosci in szkola.kategorie %}
+                <small class="text-muted"><i class="far fa-check-circle"></i>{{ umiejetnosci.nazwaUmiejetnosci }}</small>
+                {% endfor %}
             </a>
             <br>
         {% endfor %}

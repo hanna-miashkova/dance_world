@@ -46,21 +46,26 @@ html,body {
 
 .welcome{
     width: 75%;
-    margin: 0 auto;
-    padding-top: 2rem;
 }
+
 
 .welcome hr{
     border-top: 2px solid #b4b4b4;
     width: 95%;
-    margin-top: .3rem;
+    margin-top: .2rem;
     margin-bottom: 1rem;
 }
+
 
 .fa-users, .fa-home, .fa-user {
     font-size: 3em;
     color: blueviolet;
     margin: 1rem;
+}
+
+.fa-bell {
+    font-size: 3em;
+    color: blueviolet;
 }
 
 .social a{
@@ -103,12 +108,13 @@ html,body {
     position: relative;
 }
 
-/* footer{
+
+ footer{
     background-color: #3f3f3f;
     color: #d5d5d5;
     padding-top: 1rem;
 }
-*/
+
 
 /*---Media Queries --*/
 @media (max-width: 992px) {

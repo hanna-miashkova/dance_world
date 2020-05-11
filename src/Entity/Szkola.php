@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,41 @@ class Szkola
      * @ORM\Column(type="string", length=255)
      */
     private $strona;
+
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $zdjecie;
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $wideo;
+
+    /**
+     * @ORM\Column(type="string", length=30, nullable=true)
+     */
+    private $kontakt;
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $godzinyKontakt;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Umiejetnosci", inversedBy="szkolas")
+     */
+    private $kategorie;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $adres;
+
+    public function __construct()
+    {
+        $this->kategorie = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +140,92 @@ class Szkola
     public function setStrona(string $strona): self
     {
         $this->strona = $strona;
+
+        return $this;
+    }
+
+    public function getZdjecie(): ?string
+    {
+        return $this->zdjecie;
+    }
+
+    public function setZdjecie(string $zdjecie): self
+    {
+        $this->zdjecie = $zdjecie;
+
+        return $this;
+    }
+
+    public function getWideo(): ?string
+    {
+        return $this->wideo;
+    }
+
+    public function setWideo(?string $wideo): self
+    {
+        $this->wideo = $wideo;
+
+        return $this;
+    }
+
+    public function getKontakt(): ?string
+    {
+        return $this->kontakt;
+    }
+
+    public function setKontakt(?string $kontakt): self
+    {
+        $this->kontakt = $kontakt;
+
+        return $this;
+    }
+
+    public function getGodzinyKontakt(): ?string
+    {
+        return $this->godzinyKontakt;
+    }
+
+    public function setGodzinyKontakt(?string $godzinyKontakt): self
+    {
+        $this->godzinyKontakt = $godzinyKontakt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Umiejetnosci[]
+     */
+    public function getKategorie(): Collection
+    {
+        return $this->kategorie;
+    }
+
+    public function addKategorie(Umiejetnosci $kategorie): self
+    {
+        if (!$this->kategorie->contains($kategorie)) {
+            $this->kategorie[] = $kategorie;
+        }
+
+        return $this;
+    }
+
+    public function removeKategorie(Umiejetnosci $kategorie): self
+    {
+        if ($this->kategorie->contains($kategorie)) {
+            $this->kategorie->removeElement($kategorie);
+        }
+
+        return $this;
+    }
+
+    public function getAdres(): ?string
+    {
+        return $this->adres;
+    }
+
+    public function setAdres(?string $adres): self
+    {
+        $this->adres = $adres;
 
         return $this;
     }

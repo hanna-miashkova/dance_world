@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Szkola tanca {% endblock %}
+
+{%  block body %}
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h3>Dowiedź się więcej o "{{ szkola.nazwaSzkoly }}" </h3>
+                <hr style="width: 75%; border-top: 2px solid #b4b4b4">
+            </div>
+        </div>
+
+    <div class="row">
+
+        <div class="col-6 col-md-6">{{ szkola.pelnyOpis }}</div>
+
+        <div class="col-12 col-md-6">
+           <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="{{ szkola.wideo }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="row  text-center">
+            <div class="col-12">
+                <h3 class="text-center">Nasi instruktorzy</h3>
+                <hr style="width: 75%; border-top: 2px solid #b4b4b4">
+            </div>
+
+        </div>
+
+
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('img/instruktor1.jpg') }}">
+                    <div class="card-body">
+                        <h4 class="card-title">Imię Nazwisko</h4>
+                        <p class="card-text">Krótki opis</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('img/instruktor2.jpg') }}">
+                    <div class="card-body">
+                        <h4 class="card-title">Imię Nazwisko</h4>
+                        <p class="card-text">Krótki opis</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('img/instruktor3.jpg') }}">
+                    <div class="card-body">
+                        <h4 class="card-title">Imię Nazwisko</h4>
+                        <p class="card-text">Krótki opis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+
+    <footer style="background-color: #3f3f3f; color: #d5d5d5; padding-top: 1rem">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class ="col-md-8">
+                    <iframe src="{{ szkola.adres }}" width="700" height="270" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+                <div class ="col-md-4">
+                    <hr class="light" style="width: 30%; border-top: 1px solid ">
+                    <h6>Kontakt</h6>
+                    <p>{{ szkola.kontakt }}</p>
+
+                    <hr class="light" style="width: 40%; border-top: 1px solid">
+                    <h6>Godziny otwarcia</h6>
+                    <p>codziennie {{ szkola.godzinyKontakt }}</p>
+
+                    <hr class="light" style="width: 30%; border-top: 1px solid">
+                    <h6>Nasza strona</h6>
+                    <p><a href="{{ szkola.strona }}"  style="color: #d5d5d5">{{ szkola.strona }}</a></p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+{% endblock %}
