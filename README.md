@@ -1,6 +1,7 @@
-# dance_world
+# Dance world 
+Aplikacja webowa przedstawiająca szkoły tańca z różnych miast Polski. Za pomocą aplikacji będzie możliwe wyszukanie szkół tańca z listy albo na podstawie kryteriów wybranych przez użytkownika. Aplikacja umożliwia logowanie i rejestrację nowych użytkowników.
 
-## Używane frameworki:
+## Frameworki:
 * Symfony4
 * Bootstrap4
 
