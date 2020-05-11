@@ -5,6 +5,9 @@ Aplikacja webowa przedstawiająca szkoły tańca z różnych miast Polski. Za po
 * Symfony4
 * Bootstrap4
 
+## Inspiracja Bootstrap:
+https://youtu.be/9cKsq14Kfsw
+
 ## Link do aplikacji :
 chwilowo problemy techniczne z migracjami do bd Heroku JawsDB
 https://gentle-everglades-53070.herokuapp.com/
