@@ -46,6 +46,8 @@ html,body {
 
 .welcome{
     width: 75%;
+    margin: 0 auto;
+    padding-top: 1rem;
 }
 
 
@@ -109,12 +111,12 @@ html,body {
 }
 
 
- footer{
+/* footer{
     background-color: #3f3f3f;
     color: #d5d5d5;
     padding-top: 1rem;
 }
-
+*/
 
 /*---Media Queries --*/
 @media (max-width: 992px) {
