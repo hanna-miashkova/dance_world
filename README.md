@@ -18,7 +18,7 @@ utworzyć w PhpMyAdmin bazę „dance_world” i wypełnić ją przykładowymi d
 
 ## zajęcia 4 :
 Stworzono stronę startową oraz połączono projekt z BD. Głównie praca była przeprowadzona ze stylem strony. Templatka „onas.html.twig” zawiera wszystkie elementy strony „O nas”, rozszerza ona templatkę „base. html.twig” którą zawiera „navbar. html.twig”. Arkusz styli znajduje się w folderze public. Stworzono również kontroller  „MainPageController” dla templatek bazowych. (na razie na stronie głównej w sliderze jest tylko pierwsze zdjęcie dobrane do strony, reszta będzie zmieniona żeby pasowała kolorystycznie)
-![Start_page](./repo/start.png)
+![Start_page](./public/repo/start.png)
 
 ## zajęcia 5: 
 Stworzono stronę logowania, dodano nowe opcje w menu widoczne po zalogowaniu, jest wylogowanie użytkownika i widok strony rejestracji. Problem się pojawił z encodowaniem hasła i podziałem użytkowników na role, dlatego w celu poprawnego działania zostawimy to na następne zajęcie. Również są sprawdzane niektóre warunki przy logowaniu oraz rejestracji. Templatka „login.html.twig” i „register.html.twig” odpowiednio. Do nich SecurityController. Do walidacji danych w folderze security klasa UzytkownikAuthenticator.
