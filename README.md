@@ -6,6 +6,7 @@ Aplikacja webowa przedstawiająca szkoły tańca z różnych miast Polski. Za po
 * Bootstrap4
 
 ## Link do aplikacji :
+chwilowo problemy techniczne z migracjami do bd Heroku JawsDB
 https://gentle-everglades-53070.herokuapp.com/
 
 ## Instrukcja do uruchomienia lokalnie: 
@@ -27,19 +28,22 @@ Dodano nowe opcje w menu widoczne po zalogowaniu : wylogowanie użytkownika i wi
 
 ## zajęcia 6:
 Skończono rejestrację użytkownika, dodano nowe pola i ograniczenia. Zmiany możemy zobaczyć w "register.html.twig" i w SecurityController funkcja register. 
-![Login_page](./public/repo/registration.png)
+![Registration_page](./public/repo/registration.png)
 Zrobiono również panel użytkownika: zdjęcie, dane, umijętności które użytkownik może zmieniać i wybierać za pomocą popup. Templatka profil.html.twig oraz w MainPageController funkcja infoProfil.
-![Login_page](./public/repo/user_profil.png)
+![User_page](./public/repo/user_profil.png)
 
 ## zajęcia 7: 
 Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". 
 
 Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. 
+![List_page](./public/repo/szkola_lista.png)
  
-
 ## zajęcia 8: 
 Wdrożenie aplikacji na Heroku. W projekcie baza danych MySQL przy użyciu dodatku JawsDB. Client - HeidiSQL. Link do aplikacji "https://gentle-everglades-53070.herokuapp.com/" 
 
 ## zajęcia 9: 
-Utworzono widok szkoły tańca po wyborze z listy szkół. Dodane zostały również kategorie tańca którymi się zajmuje szkoła po stworzeniu relacji ManyToMany z encją Umiejętności. Widok szkół jest w templatce "szkolaInfo.html.twig" i kontroller do tego "SzkolaInfoController.php". Widok się składa z wideo o szkole z YT, pełnego opisu, w footerze jest lokalizacja z goole maps i dane do kontaktu wraz ze stroną internetową. Postanowiłam dodać również do widoku szkoły jej instruktorów. Na razie są to sztywnie wybrane obrazki z opisem.
+Utworzono widok szkoły tańca po wyborze z listy szkół. Widok szkół jest w templatce "szkolaInfo.html.twig" i kontroller do tego "SzkolaInfoController.php". Widok się składa z wideo o szkole z YT, pełnego opisu, w footerze jest lokalizacja z goole maps i dane do kontaktu wraz ze stroną internetową. Postanowiłam dodać również do widoku szkoły jej instruktorów. Na razie są to sztywnie wybrane obrazki z opisem. 
+![School_info_page](./public/repo/szkola_info.png)
+Dodane zostały również kategorie tańca którymi się zajmuje szkoła po stworzeniu relacji ManyToMany z encją Umiejętności. 
+![School_list_page](./public/repo/szkola_list_kategorie.png)
 
