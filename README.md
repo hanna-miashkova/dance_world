@@ -9,9 +9,9 @@ https://gentle-everglades-53070.herokuapp.com/
 
 ## Instrukcja do uruchomienia lokalnie: 
 * Aby uruchomić aplikację lokalnie trzeba pobrać xampp, następnie dodać folder (nazwa „dance_world”) z całą aplikacją do folderu htdocs po otwarciu folderu xampp
-*Uruchomić Apache i MySQL
-*W przeglądarce wpisać „http://localhost/dance_world/public/”
-*W celu przeglądania lokalnie danych na stronie co są pobierane z bazy danych trzeba w .env wpisać:
+* Uruchomić Apache i MySQL
+* W przeglądarce wpisać „http://localhost/dance_world/public/”
+* W celu przeglądania lokalnie danych na stronie co są pobierane z bazy danych trzeba w .env wpisać:
 DATABASE_URL=mysql://root:@127.0.0.1:3306/dance_world?serverVersion=5.7 
 utworzyć w PhpMyAdmin bazę „dance_world” i wypełnić ją przykładowymi danymi. 
 
