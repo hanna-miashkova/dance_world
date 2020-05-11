@@ -13,4 +13,7 @@ zajęcia 6: Skończono rejestrację użytkownika, dodano nowe pola i ograniczeni
 
 zajęcia 7: Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. Folder .idea został dodany do gitignore, ale nie wiem czemu nadal znajduje się w repozytorium. 
 
+zajęcia 8: Wdrożenie aplikacji na Heroku. W projekcie baza danych MySQL przy użyciu dodatku JawsDB. Client - HeidiSQL. Link do aplikacji "https://gentle-everglades-53070.herokuapp.com/" 
+
+zajęcia 9: Utworzono widok szkoły tańca po wyborze z listy szkół. Dodane zostały również kategorie tańca którymi się zajmuje szkoła po stworzeniu relacji ManyToMany z encją Umiejętności. Widok szkół jest w templatce "szkolaInfo.html.twig" i kontroller do tego "SzkolaInfoController.php". Widok się składa z wideo o szkole z YT, pełnego opisu, w footerze jest lokalizacja z goole maps i dane do kontaktu wraz ze stroną internetową. Postanowiłam dodać również do widoku szkoły jej instruktorów. Na razie są to sztywnie wybrane obrazki z opisem.
 
