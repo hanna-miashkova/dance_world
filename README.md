@@ -19,7 +19,7 @@ https://gentle-everglades-53070.herokuapp.com/
 * W celu przeglądania lokalnie danych na stronie co są pobierane z bazy danych trzeba w .env wpisać:
 DATABASE_URL=mysql://root:@127.0.0.1:3306/dance_world?serverVersion=5.7 
 utworzyć w PhpMyAdmin bazę „dance_world” i wypełnić ją przykładowymi danymi. 
-![Instrukcja_page](./public/repo/instrukcja.png)
+![Instrukcja_page](./public/repo/Instrukcja_new.png)
 
 ## zajęcia 4 :
 Stworzono stronę startową oraz połączono projekt z BD. Głównie praca była przeprowadzona ze stylem strony. Templatka „onas.html.twig” zawiera wszystkie elementy strony „O nas”, rozszerza ona templatkę „base. html.twig” którą zawiera „navbar. html.twig”. Arkusz styli znajduje się w folderze public. Stworzono również kontroller  „MainPageController” dla templatek bazowych. (na razie na stronie głównej w sliderze jest tylko pierwsze zdjęcie dobrane do strony, reszta będzie zmieniona żeby pasowała kolorystycznie)
