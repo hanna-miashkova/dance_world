@@ -71,7 +71,7 @@
         <div class="container-fluid padding">
             <div class="row text-center">
                 <div class ="col-md-8">
-                    <iframe src="{{ szkola.adres }}" width="700" height="270" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?{{ szkola.adres }}" width="700" height="270" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
 
                 <div class ="col-md-4">
@@ -85,7 +85,7 @@
 
                     <hr class="light" style="width: 30%; border-top: 1px solid">
                     <h6>Nasza strona</h6>
-                    <p><a href="https://www.google.com/maps/embed?{{ szkola.strona }}"  style="color: #d5d5d5">https://www.google.com/maps/embed?{{ szkola.strona }}</a></p>
+                    <p><a href="{{ szkola.strona }}"  style="color: #d5d5d5">{{ szkola.strona }}</a></p>
                 </div>
             </div>
 
