@@ -50,3 +50,7 @@ Utworzono widok szkoły tańca po wyborze z listy szkół. Widok szkół jest w 
 Dodane zostały również kategorie tańca którymi się zajmuje szkoła po stworzeniu relacji ManyToMany z encją Umiejętności. 
 ![School_list_page](./public/repo/szkola_list_kategorie.png)
 
+## zajęcia 10: 
+Przy otworzeniu listy szkół pojawia się opcja do wyboru interesującego miasta ze szkołą.
+![Miasto_filter_page](./public/repo/city_filter.png)
+
