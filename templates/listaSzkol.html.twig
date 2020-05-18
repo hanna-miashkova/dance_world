@@ -3,37 +3,39 @@
 {% block title %} Szkoły tańca {% endblock %}
 
 {% block body %}
-{#<div class="row">#}
-{#    {% for szkola in szkoly %}#}
-{#    <div class="col-6 col-md-3">#}
-{#        <select class="form-control selectpicker show-tick" id="select-country" data-live-search="true">#}
-{#            <option data-tokens="city">{{ szkola.miastoSzkoly.nazwaMiasta}} </option>#}
+    <form>
+        <div class="row">
 
-{#        </select>#}
-{#    </div>#}
-{#        <div class="col-6 col-md-3">#}
-{#            <select class="form-control selectpicker show-tick" id="select-kategory" data-live-search="true">#}
-{#                <option data-tokens="china">opcja </option>#}
+            <div class="col-4 col-md-4">
+                <select class="form-control selectpicker show-tick" id="select-country" data-live-search="true" name="miasto">
+                    <option value="0">Wybierz miasto</option>
+                    {% for miasto in miasta %}
+                        <option data-tokens="city" value="{{ miasto.id }}" {% if wybrane_miasto==miasto.id %} selected {% endif %}>{{ miasto.nazwaMiasta }} </option>
+                    {% endfor %}
+                </select>
+            </div>
 
-{#            </select>#}
-{#        </div>#}
-{#    {% endfor %}#}
-    <div>
-        <label for="listSearch"></label><input class="form-control" id="listSearch" type="text" placeholder="🔍 Szukaj po wszystkim">
-    </div>
-<br>
+            <div class="col-4 col-md-4">
+                <button class="btn btn-primary" type="submit"> Szukaj</button>
+            </div>
+
+        </div>
+    </form>
+
 
     <div class="list-group">
 
         {% for szkola in szkoly %}
-            <a href="{{ path('szkola_info', {"id":szkola.id}) }}" class="list-group-item list-group-item-action flex-column align-items-start" id="myList">
+            <a href="{{ path('szkola_info', {"id":szkola.id}) }}"
+               class="list-group-item list-group-item-action flex-column align-items-start" id="myList">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1" >{{ szkola.nazwaSzkoly }}</h5>
-                                    <small class="text-muted">{{ szkola.miastoSzkoly.nazwaMiasta }}</small>
+                    <h5 class="mb-1">{{ szkola.nazwaSzkoly }}</h5>
+                    <small class="text-muted">{{ szkola.miastoSzkoly.nazwaMiasta }}</small>
                 </div>
                 <p class="mb-1">{{ szkola.opisKrotki }}</p>
                 {% for umiejetnosci in szkola.kategorie %}
-                <small class="text-muted"><i class="far fa-check-circle"></i>{{ umiejetnosci.nazwaUmiejetnosci }}</small>
+                    <small class="text-muted"><i class="far fa-check-circle"></i>{{ umiejetnosci.nazwaUmiejetnosci }}
+                    </small>
                 {% endfor %}
             </a>
             <br>
@@ -42,19 +44,6 @@
 
 {% endblock %}
 
-{% block javascripts %}
-<script>
-    $(document).ready(function(){
-        $("#listSearch").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myList").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>
-
-{% endblock %}
 
 
 

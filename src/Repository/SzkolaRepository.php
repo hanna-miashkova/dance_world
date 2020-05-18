@@ -18,23 +18,50 @@ class SzkolaRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Szkola::class);
     }
-
-    // /**
-    //  * @return Szkola[] Returns an array of Szkola objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('s')
-            ->andWhere('s.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('s.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+//
+//     /**
+//      * @return Szkola[] Returns an array of Szkola objects
+//      */
+//
+//    public function findByMiastoKategoria($miastoID, $kategoriaID)
+//    {
+//        return $this->createQueryBuilder('s')
+//            ->andWhere('s.miastoSzkoly = :miasto')
+//            ->setParameter('miasto', $miastoID)
+//            ->join('s.kategorie','k')
+//            ->andWhere('k.szkolas = :kategoria')
+//            ->setParameter('kategoria', $kategoriaID)
+//            ->orderBy('s.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
+//
+//    public function findByMiasto($value)
+//    {
+//        return $this->createQueryBuilder('s')
+//            ->andWhere('s.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('s.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//            ;
+//    }
+//
+//    public function findByKategoria($value)
+//    {
+//        return $this->createQueryBuilder('s')
+//            ->andWhere('s.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('s.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//            ;
+//    }
+//
 
     /*
     public function findOneBySomeField($value): ?Szkola
