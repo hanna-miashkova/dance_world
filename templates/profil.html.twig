@@ -31,16 +31,14 @@
                 {{ umiejetnosci.nazwaUmiejetnosci }}
                 {% endfor %}
 </p>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Wybierz swoje umiejetnosci
-                </button>
+
+
 
                 <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Lista umiejętności</h5>
+                                <h5 class="modal-title">Edytuj profil</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -62,10 +60,9 @@
                 <p>{{ app.user.info }}</p>
 
             </div>
-
-            <div class="d-inline" >
-                <button type="button" class="btn btn-primary" data-toggle="modal">Edytuj profil</button>
-            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Edytuj profil
+            </button>
         </div>
     </div>
 </div>

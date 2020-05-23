@@ -17,10 +17,19 @@ class ListaSzkolController extends AbstractController
      */
     public function szkoly(Request $request)
     {
-        $wybrane_miasto = $request->query->get('miasto','');
+        $wybrane_miasto = $request->query->get('miasto');
+        if(isset($wybrane_miasto)){
+            /** @var Szkola[] $szkoly */
+            $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findBy(['miastoSzkoly'=> $wybrane_miasto]);
+        }else{
+            /** @var Szkola[] $szkoly */
+            $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findAll();
+        }
 
-        /** @var Szkola[] $szkoly */
-        $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findBy(['miastoSzkoly'=> $wybrane_miasto]);
+        $wybrana_nazwa = $request->query->get('nazwa');
+        if(isset($wybrana_nazwa)) {
+            $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findBy(['nazwaSzkoly' => $wybrana_nazwa]);
+        }
 
         /** @var Miasto[] $miasta */
         $miasta = $this->getDoctrine()->getRepository(Miasto::class)->findBy([], ['nazwaMiasta' => 'ASC']);
