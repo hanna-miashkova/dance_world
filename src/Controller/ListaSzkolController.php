@@ -18,7 +18,7 @@ class ListaSzkolController extends AbstractController
     public function szkoly(Request $request)
     {
         $wybrane_miasto = $request->query->get('miasto');
-        if(isset($wybrane_miasto)){
+        if(!empty($wybrane_miasto)){
             /** @var Szkola[] $szkoly */
             $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findBy(['miastoSzkoly'=> $wybrane_miasto]);
         }else{
@@ -26,8 +26,8 @@ class ListaSzkolController extends AbstractController
             $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findAll();
         }
 
-        $wybrana_nazwa = $request->query->get('nazwa');
-        if(isset($wybrana_nazwa)) {
+        $wybrana_nazwa = $request->query->get('nazwa',null);
+        if(!empty($wybrana_nazwa)) {
             $szkoly = $this->getDoctrine()->getRepository(Szkola::class)->findBy(['nazwaSzkoly' => $wybrana_nazwa]);
         }
 
