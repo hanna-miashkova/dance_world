@@ -5,8 +5,9 @@ Aplikacja webowa przedstawiająca szkoły tańca z różnych miast Polski. Za po
 * Symfony4
 * Bootstrap4
 
-## Inspiracja Bootstrap:
-https://youtu.be/9cKsq14Kfsw
+## Ilustracje:
+https://undraw.co/illustrations 
+Strona główna : https://www.freepik.com/free-vector/man-dancing-listening-music_8051289.htm
 
 ## Link do aplikacji :
 https://gentle-everglades-53070.herokuapp.com/
@@ -32,14 +33,14 @@ Dodano nowe opcje w menu widoczne po zalogowaniu : wylogowanie użytkownika i wi
 ## zajęcia 6:
 Skończono rejestrację użytkownika, dodano nowe pola i ograniczenia. Zmiany możemy zobaczyć w "register.html.twig" i w SecurityController funkcja register. 
 ![Registration_page](./public/repo/registration.png)
+
 Zrobiono również panel użytkownika: zdjęcie, dane, umijętności które użytkownik może zmieniać i wybierać za pomocą popup. Templatka profil.html.twig oraz w MainPageController funkcja infoProfil.
-![User_page](./public/repo/user_profil.png)
 
 ## zajęcia 7: 
 Widok listy szkół, który zawiera nazwę szkoły, miasto, opis. Lista jest posortowana alfabetycznie wg nazwy szkoły. Templatka do tego widoku "listaSkol.html.twig", controller "ListaSzkolController". 
 
 Do zrealizowania należało dodać encję Szkoła i Miasto. Są powiązane relacją OneToMany. 
-![List_page](./public/repo/szkola_lista.png)
+
  
 ## zajęcia 8: 
 Wdrożenie aplikacji na Heroku. W projekcie baza danych MySQL przy użyciu dodatku JawsDB. Client - HeidiSQL. Link do aplikacji "https://gentle-everglades-53070.herokuapp.com/" 
@@ -48,9 +49,21 @@ Wdrożenie aplikacji na Heroku. W projekcie baza danych MySQL przy użyciu dodat
 Utworzono widok szkoły tańca po wyborze z listy szkół. Widok szkół jest w templatce "szkolaInfo.html.twig" i kontroller do tego "SzkolaInfoController.php". Widok się składa z wideo o szkole z YT, pełnego opisu, w footerze jest lokalizacja z goole maps i dane do kontaktu wraz ze stroną internetową. Postanowiłam dodać również do widoku szkoły jej instruktorów. Na razie są to sztywnie wybrane obrazki z opisem. 
 ![School_info_page](./public/repo/szkola_info.png)
 Dodane zostały również kategorie tańca którymi się zajmuje szkoła po stworzeniu relacji ManyToMany z encją Umiejętności. 
-![School_list_page](./public/repo/szkola_list_kategorie.png)
 
 ## zajęcia 10: 
-Przy otworzeniu listy szkół pojawia się opcja do wyboru interesującego miasta ze szkołą.
-![Miasto_filter_page](./public/repo/city_filter.png)
+Przy otworzeniu listy szkół pojawia się opcja do wyboru interesującego miasta ze szkołą. Można również wyszukać po nazwie szkoły :
+![School_search_page](./public/repo/lista.png)
+
+Kiedy nie ma szkoły spełniającej wybrane kryteria:
+![School_error_page](./public/repo/search_error.png)
+
+## zajęcia 11:
+Opcja wylogowania znajduje się teraz w profilu użytkownika. 
+![User_page](./public/repo/user.png)
+
+Teraz użytkownik ma możliwość edycji profilu:
+![User_edit_page](./public/repo/edycja_profilu.png)
+
+Również po zalogowaniu użytkownik ma możliwość przeglądania profili użytkowników strony. Cel tej strony widoczny w opisie każdego użytkownika:
+![User_list_page](./public/repo/users1.png)
 
