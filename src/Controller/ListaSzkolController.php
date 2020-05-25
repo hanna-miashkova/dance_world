@@ -13,8 +13,8 @@ class ListaSzkolController extends AbstractController
     /**
        * @Route("/szkoly", name="szkoly_lista")
        * @return \Symfony\Component\HttpFoundation\Response
-
      */
+
     public function szkoly(Request $request)
     {
         $wybrane_miasto = $request->query->get('miasto');

@@ -99,23 +99,6 @@ html,body {
     color: #d5d5d5
 }
 
-#cover {
-    background-image: url('https://unsplash.it/1920/1080/?random')  ;
-    background-size: cover;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-
-/* footer{
-    background-color: #3f3f3f;
-    color: #d5d5d5;
-    padding-top: 1rem;
-}
-*/
 
 /*---Media Queries --*/
 @media (max-width: 992px) {

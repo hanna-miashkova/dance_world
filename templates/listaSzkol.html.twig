@@ -4,9 +4,9 @@
 
 {% block body %}
     <form>
-        <div class="row">
+        <div class="row" justify-content-center>
 
-            <div class="col-4 col-md-4">
+            <div class="col-6 col-md-4">
                 <select class="form-control selectpicker show-tick" id="select-country" data-live-search="true" name="miasto">
                     <option value="0">Wybierz miasto</option>
                     {% for miasto in miasta %}
@@ -15,21 +15,22 @@
                 </select>
             </div>
 
-            <div class="col-4 col-md-4">
-                <input class="form-control" type="text" placeholder="Szukaj po nazwie szkoły" aria-label="Search" name="nazwa">
+            <div class="col-6 col-md-4">
+                <input class="form-control" type="text" placeholder="🔎 Szukaj po nazwie szkoły" aria-label="Search" name="nazwa">
+
             </div>
 
             <div class="col-4 col-md-4">
-                <button class="btn btn-primary" type="submit"> Szukaj</button>
-            </div>
+                <button class="btn btn-primary" data-toggle="modal" type="submit"> Szukaj</button>
 
+            </div>
 
         </div>
     </form>
 
 
     <div class="list-group">
-
+        {% if szkoly %}
         {% for szkola in szkoly %}
             <a href="{{ path('szkola_info', {"id":szkola.id}) }}"
                class="list-group-item list-group-item-action flex-column align-items-start" id="myList">
@@ -46,6 +47,16 @@
             <br>
         {% endfor %}
     </div>
+        {% else %}
+
+                <div >
+                    <h4 class="text-center">Brak szkoły</h4>
+                </div>
+                <div>
+                    <img src="{{ asset('img/search.png') }}"  alt="dance" >
+                </div>
+
+        {% endif %}
 
 {% endblock %}
 

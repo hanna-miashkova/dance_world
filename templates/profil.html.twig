@@ -28,7 +28,7 @@
                 <p><b> Umiejętności: </b> </p>
 <p>
                 {% for umiejetnosci in app.user.umiejetnosci %}
-                {{ umiejetnosci.nazwaUmiejetnosci }}
+                    &bull;{{ umiejetnosci.nazwaUmiejetnosci }}
                 {% endfor %}
 </p>
 
@@ -63,6 +63,8 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Edytuj profil
             </button>
+
+            <a class="btn btn-secondary" href="{{ path('app_logout') }}" role="button">Wyloguj się</a>
         </div>
     </div>
 </div>

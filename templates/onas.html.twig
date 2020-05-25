@@ -7,90 +7,104 @@
             {{ message }}
         </div>
     {% endfor %}
+    <div class="row">
 
-
-    <!--- Slider -->
-    <div id="slides" class="carousel slide" data-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-target="#slides" data-slide-to="0" class="active"></li>
-            <li data-target="#slides" data-slide-to="1"></li>
-            <li data-target="#slides" data-slide-to="2"></li>
-        </ul>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/dance.png') }}"  alt="dance">
-                <div class="carousel-caption">
-                <h1 class="display-2">Tańcz razem z nami</h1>
-                <h3>Baza wszystkich szkół tańca Polski w jednym miejscu</h3>
-                <button type="button" class="btn btn-outline-light btn-lg" href="{{ path('szkoly_lista') }}"> Zobacz </button>
-                </div>
-            </div>
-            <div class="carousel-item" >
-                <img src="{{ asset('img/background2.png') }}" alt="dance">
-            </div>
-            <div class="carousel-item" >
-                <img src="{{ asset('img/background3.png') }}" alt="dance">
-            </div>
+        <div class="col-6 col-md-6" style="margin: 100px 0px 70px; color: #494b54">
+            <h1 >Tańcz razem z nami!</h1>
+            <h5 >&bull; Najpopularniejsze szkoły tańca zebrane w jednym miejscu specjalnie dla Ciebie.<br>
+                &bull; Pomożemy zaoszczędzić Twój czas
+            </h5>
+            <button class="btn btn-primary" >Znajdź szkołę</button>
         </div>
+
+        <div class="col-12 col-md-6">
+            <img src="{{ asset('img/dance_boy.png') }}"  alt="dance" >
+        </div>
+
     </div>
 
-    <!--- Jumbotron -->
-    <div class="container-fluid">
-        <div class="row jumbotron">
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-                <p class="lead">Opis</p>
-            </div>
-        </div>
-    </div>
+{#    <!--- Slider -->#}
+{#    <div id="slides" class="carousel slide" data-ride="carousel">#}
+{#        <ul class="carousel-indicators">#}
+{#            <li data-target="#slides" data-slide-to="0" class="active"></li>#}
+{#            <li data-target="#slides" data-slide-to="1"></li>#}
+{#            <li data-target="#slides" data-slide-to="2"></li>#}
+{#        </ul>#}
+
+{#        <div class="carousel-inner">#}
+{#            <div class="carousel-item active">#}
+{#                <img src="{{ asset('img/dance.png') }}"  alt="dance">#}
+{#                <div class="carousel-caption">#}
+{#                <h1 class="display-2">Tańcz razem z nami</h1>#}
+{#                <h3>Baza wszystkich szkół tańca Polski w jednym miejscu</h3>#}
+{#                <button type="button" class="btn btn-outline-light btn-lg" href="{{ path('szkoly_lista') }}"> Zobacz </button>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="carousel-item" >#}
+{#                <img src="{{ asset('img/background2.png') }}" alt="dance">#}
+{#            </div>#}
+{#            <div class="carousel-item" >#}
+{#                <img src="{{ asset('img/background3.png') }}" alt="dance">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+{#    <!--- Jumbotron -->#}
+{#    <div class="container-fluid">#}
+{#        <div class="row jumbotron">#}
+{#            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">#}
+{#                <p class="lead">Opis</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
-    <!--- Welcome -->
-    <div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4" >Dance World</h1>
-            </div>
-            <hr>
-            <div class="col-12">
-                <p class="lead"> Nasza strona w liczbach: </p>
-            </div>
-        </div>
-    </div>
+{#    <!--- Welcome -->#}
+{#    <div class="container-fluid padding">#}
+{#        <div class="row welcome text-center">#}
+{#            <div class="col-12">#}
+{#                <h1 class="display-4" >Dance World</h1>#}
+{#            </div>#}
+{#            <hr>#}
+{#            <div class="col-12">#}
+{#                <p class="lead"> Nasza strona w liczbach: </p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
-    <!--- W liczbach -->
-    <div class="container-fluid padding">
-        <div class="row text-center padding">
-            <div class="col-sm-6 ">
-                 <i class="fas fa-home"></i>
-                 <h3>Szkoły tańca</h3>
-                 <p>35</p>
-             </div>
-            <div class="col-sm-6 ">
-                <i class="fas fa-user"></i>
-                <h3>Użytkownicy</h3>
-                <p>3597</p>
-            </div>
-        </div>
-        <hr>
-    </div>
+{#    <!--- W liczbach -->#}
+{#    <div class="container-fluid padding">#}
+{#        <div class="row text-center padding">#}
+{#            <div class="col-sm-6 ">#}
+{#                 <i class="fas fa-home"></i>#}
+{#                 <h3>Szkoły tańca</h3>#}
+{#                 <p>35</p>#}
+{#             </div>#}
+{#            <div class="col-sm-6 ">#}
+{#                <i class="fas fa-user"></i>#}
+{#                <h3>Użytkownicy</h3>#}
+{#                <p>3597</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <hr>#}
+{#    </div>#}
 
-    <!--- Kontakt -->
+{#    <!--- Kontakt -->#}
 
-   <div class="container-fluid padding">
-       <div class="row text-center padding">
-           <div class="col-12">
-               <h4>Kontakt: </h4>
-           </div>
-           <div class="col-12 social padding">
-               <a href="#"><i class="fab fa-facebook"></i></a>
-               <a href="#"><i class="fab fa-twitter"></i></a>
-               <a href="#"><i class="fab fa-google-plus-g"></i></a>
-               <a href="#"><i class="fab fa-instagram"></i></a>
-               <a href="#"><i class="fab fa-youtube"></i></a>
-           </div>
-       </div>
-   </div>
+{#   <div class="container-fluid padding">#}
+{#       <div class="row text-center padding">#}
+{#           <div class="col-12">#}
+{#               <h4>Kontakt: </h4>#}
+{#           </div>#}
+{#           <div class="col-12 social padding">#}
+{#               <a href="#"><i class="fab fa-facebook"></i></a>#}
+{#               <a href="#"><i class="fab fa-twitter"></i></a>#}
+{#               <a href="#"><i class="fab fa-google-plus-g"></i></a>#}
+{#               <a href="#"><i class="fab fa-instagram"></i></a>#}
+{#               <a href="#"><i class="fab fa-youtube"></i></a>#}
+{#           </div>#}
+{#       </div>#}
+{#   </div>#}
 
 
 
