@@ -67,3 +67,8 @@ Teraz użytkownik ma możliwość edycji profilu:
 Również po zalogowaniu użytkownik ma możliwość przeglądania profili użytkowników strony. Cel tej strony widoczny w opisie każdego użytkownika:
 ![User_list_page](./public/repo/users1.png)
 
+## zajęcia 12:
+Został stworzony demo mailer, przetestowanie działania odbyło się za pomocą MailTrap.io.
+E-mail jest wysyłany do użytkownika po pomyślnej rejestracji:
+![Email_page](./public/repo/mail.png)
+

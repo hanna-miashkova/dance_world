@@ -4,17 +4,21 @@ namespace App\Controller;
 
 use App\Entity\Uzytkownik;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
     /**
      * @Route("/login", name="app_login")
+     * @param AuthenticationUtils $authenticationUtils
+     * @return Response
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -36,10 +40,11 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/register", name="app_register")
+     * @param MailerInterface $mailer
      * @param Request $request
      * @return Response
      */
-    public function register(Request $request)
+    public function register(MailerInterface $mailer, Request $request)
     {
 
        if($request->isMethod(Request::METHOD_POST)){
@@ -55,6 +60,17 @@ class SecurityController extends AbstractController
                $em = $this->getDoctrine()->getManager();
                $em->persist($user);
                $em->flush();
+
+               $email= (new TemplatedEmail())
+                   ->from(new Address('danceworld@example.com', 'Dance World'))
+                   ->to(new Address($user->getEmail(),$user->getImie()))
+                   ->subject('Witamy w Dance World!')
+                   ->htmlTemplate('email/email.html.twig')
+                   ->context([
+                     //  'user'=> $user
+               ]);
+
+               $mailer->send($email);
 
                $this->addFlash('welcome', 'Dziękujemy za rejestrację! Możesz się teraz zalogować ;) ');
                return $this->redirectToRoute('start_page');

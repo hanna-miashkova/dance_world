@@ -1,0 +1,76 @@
+{% apply inline_css %}
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Witamy w Dance World!</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        h1{
+            background-color: #264459;
+            color: #ffffff;
+            padding: 30px 0 50px 0;
+            font-weight: normal;
+        }
+        hr{
+            border: none;
+            border-top: 3px solid #264459;
+            margin: 20px;
+        }
+        .container{
+            background-color: #fefefe;
+            width: 580px;
+            margin: 0 auto;
+        }
+        .bottom{
+            background-color: #efefee;
+        }
+        .block{
+            margin: 0;
+            padding: 10px 20px 20px 20px;
+        }
+        .logo{
+            width: 100%;
+        }
+        .text-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="body">
+    <div class="container">
+        <div class="header text-center">
+            <a href="{{ url('info_page') }}">
+                <img src="{{ absolute_url(asset('illustracje/welcome.png')) }}" class="logo" alt="SpaceBar Logo">
+            </a>
+        </div>
+        <div class="content">
+            <h1 class="text-center">Miło Cię widzieć {{email.toName}}! 💙</h1>
+            <p class="block">
+                Bardzo dziękujemy za rejestrację na stronie <strong>Dance World</strong>! Dzięki subskrypcji na bieżąco będą informację o nowych ogłoszeniach na stronie i wszelkich zmianach.
+            </p>
+            <p class="block">
+                Potrzebujesz pomocy? Możesz zawsze napisać do nas!
+            </p>
+        </div>
+        <div class="footer">
+            <p class="block">
+                Cieszymy się że jesteś z nami :) <br><br>
+                Zespół <em>Dance World</em>
+            </p>
+            <p class="block bottom text-center">
+                Jeśli chcesz anulować subskrypcję <a href="#">kliknij tu</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endapply %}

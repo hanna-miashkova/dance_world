@@ -9,7 +9,7 @@
     {% endfor %}
     <div class="row">
 
-        <div class="col-6 col-md-6" style="margin: 100px 0px 70px; color: #494b54">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="margin: 100px 0 70px; color: #494b54">
             <h1 >Tańcz razem z nami!</h1>
             <h5 >&bull; Najpopularniejsze szkoły tańca zebrane w jednym miejscu specjalnie dla Ciebie.<br>
                 &bull; Pomożemy zaoszczędzić Twój czas
@@ -17,7 +17,7 @@
             <button class="btn btn-primary" >Znajdź szkołę</button>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
             <img src="{{ asset('img/dance_boy.png') }}"  alt="dance" >
         </div>
 
@@ -59,35 +59,47 @@
 {#    </div>#}
 
 
-{#    <!--- Welcome -->#}
-{#    <div class="container-fluid padding">#}
-{#        <div class="row welcome text-center">#}
-{#            <div class="col-12">#}
-{#                <h1 class="display-4" >Dance World</h1>#}
-{#            </div>#}
-{#            <hr>#}
-{#            <div class="col-12">#}
-{#                <p class="lead"> Nasza strona w liczbach: </p>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    <!--- Welcome -->
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4" >Dance World</h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead"> Dowiedź się więcej o stronie: </p>
+            </div>
+        </div>
+    </div>
 
-{#    <!--- W liczbach -->#}
-{#    <div class="container-fluid padding">#}
-{#        <div class="row text-center padding">#}
-{#            <div class="col-sm-6 ">#}
-{#                 <i class="fas fa-home"></i>#}
-{#                 <h3>Szkoły tańca</h3>#}
-{#                 <p>35</p>#}
-{#             </div>#}
-{#            <div class="col-sm-6 ">#}
-{#                <i class="fas fa-user"></i>#}
-{#                <h3>Użytkownicy</h3>#}
-{#                <p>3597</p>#}
-{#            </div>#}
-{#        </div>#}
-{#        <hr>#}
-{#    </div>#}
+    <!--- W liczbach -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-sm-3 ">
+                <img src="{{ asset('illustracje/search.png') }}"  alt="dance" >
+                 <h4>Znajdź szkołę</h4>
+                 <p class="text-left">Po wejściu na stronę ze szkołami tańca jest możliwość filtrowania według wybranych kreteriów</p>
+             </div>
+            <div class="col-sm-3 ">
+                <img src="{{ asset('illustracje/video.png') }}"  alt="dance" >
+                <h4>Obejrzyj wideo</h4>
+                <p class="text-left">Każda szkoła posiada również opis szczegółowy, który zawiera filmik wprowadzający o szkole</p>
+            </div>
+            <div class="col-sm-3 ">
+                <img src="{{ asset('illustracje/location.png') }}"  alt="dance" >
+                <h4>Sprawdź lokalizację</h4>
+                <p class="text-left">Na końcu opisu szkoły znajduje się lokalizacja na mapie Google, klikając możesz ją powiększyć</p>
+            </div>
+            <div class="col-sm-3 ">
+                <img src="{{ asset('illustracje/comunication.png') }}"  alt="dance" >
+                <h4>Nawiąż komunikację</h4>
+                <p class="text-left">Po zalogowaniu jest dostępna opcja przeglądu profili innych użytkowników serwisu</p>
+            </div>
+        </div>
+    </div>
+
+
+
 
 {#    <!--- Kontakt -->#}
 
