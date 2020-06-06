@@ -7,64 +7,28 @@
             {{ message }}
         </div>
     {% endfor %}
-    <div class="row">
+    <div class="row" >
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="margin: 100px 0 70px; color: #494b54">
-            <h1 >Tańcz razem z nami!</h1>
-            <h5 >&bull; Najpopularniejsze szkoły tańca zebrane w jednym miejscu specjalnie dla Ciebie.<br>
-                &bull; Pomożemy zaoszczędzić Twój czas
-            </h5>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 my-auto" style="color: #494b54">
+            <p style="font-weight: bold; font-size: 68px; line-height:1" >Tańcz razem <br>z nami!</p>
+            <p style="font-size: 18px">Najpopularniejsze szkoły tańca zebrane w jednym miejscu specjalnie dla Ciebie. Pomożemy zaoszczędzić Twój czas już teraz.
+                Zaloguj się i zyskuj więcej!
+            </p>
             <button class="btn btn-primary" >Znajdź szkołę</button>
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 my-auto">
             <img src="{{ asset('img/dance_boy.png') }}"  alt="dance" >
         </div>
 
     </div>
 
-{#    <!--- Slider -->#}
-{#    <div id="slides" class="carousel slide" data-ride="carousel">#}
-{#        <ul class="carousel-indicators">#}
-{#            <li data-target="#slides" data-slide-to="0" class="active"></li>#}
-{#            <li data-target="#slides" data-slide-to="1"></li>#}
-{#            <li data-target="#slides" data-slide-to="2"></li>#}
-{#        </ul>#}
-
-{#        <div class="carousel-inner">#}
-{#            <div class="carousel-item active">#}
-{#                <img src="{{ asset('img/dance.png') }}"  alt="dance">#}
-{#                <div class="carousel-caption">#}
-{#                <h1 class="display-2">Tańcz razem z nami</h1>#}
-{#                <h3>Baza wszystkich szkół tańca Polski w jednym miejscu</h3>#}
-{#                <button type="button" class="btn btn-outline-light btn-lg" href="{{ path('szkoly_lista') }}"> Zobacz </button>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="carousel-item" >#}
-{#                <img src="{{ asset('img/background2.png') }}" alt="dance">#}
-{#            </div>#}
-{#            <div class="carousel-item" >#}
-{#                <img src="{{ asset('img/background3.png') }}" alt="dance">#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-
-{#    <!--- Jumbotron -->#}
-{#    <div class="container-fluid">#}
-{#        <div class="row jumbotron">#}
-{#            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">#}
-{#                <p class="lead">Opis</p>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-
-
     <!--- Welcome -->
     <div class="container-fluid padding">
         <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4" >Dance World</h1>
-            </div>
+{#            <div class="col-12">#}
+{#                <h1 class="display-4" >Dance World</h1>#}
+{#            </div>#}
             <hr>
             <div class="col-12">
                 <p class="lead"> Dowiedź się więcej o stronie: </p>
@@ -78,22 +42,22 @@
             <div class="col-sm-3 ">
                 <img src="{{ asset('illustracje/search.png') }}"  alt="dance" >
                  <h4>Znajdź szkołę</h4>
-                 <p class="text-left">Po wejściu na stronę ze szkołami tańca jest możliwość filtrowania według wybranych kreteriów</p>
+                 <p class="text-justify">Po wejściu na stronę ze szkołami tańca jest możliwość filtrowania według wybranych kreteriów</p>
              </div>
             <div class="col-sm-3 ">
                 <img src="{{ asset('illustracje/video.png') }}"  alt="dance" >
                 <h4>Obejrzyj wideo</h4>
-                <p class="text-left">Każda szkoła posiada również opis szczegółowy, który zawiera filmik wprowadzający o szkole</p>
+                <p class="text-justify">Każda szkoła posiada również opis szczegółowy, który zawiera filmik wprowadzający o szkole</p>
             </div>
             <div class="col-sm-3 ">
                 <img src="{{ asset('illustracje/location.png') }}"  alt="dance" >
                 <h4>Sprawdź lokalizację</h4>
-                <p class="text-left">Na końcu opisu szkoły znajduje się lokalizacja na mapie Google, klikając możesz ją powiększyć</p>
+                <p class="text-justify">Na końcu opisu szkoły znajduje się lokalizacja na mapie Google, klikając możesz ją powiększyć</p>
             </div>
             <div class="col-sm-3 ">
                 <img src="{{ asset('illustracje/comunication.png') }}"  alt="dance" >
                 <h4>Nawiąż komunikację</h4>
-                <p class="text-left">Po zalogowaniu jest dostępna opcja przeglądu profili innych użytkowników serwisu</p>
+                <p class="text-justify">Po zalogowaniu jest dostępna opcja przeglądu profili innych użytkowników serwisu</p>
             </div>
         </div>
     </div>
