@@ -14,7 +14,7 @@
             <p style="font-size: 18px">Najpopularniejsze szkoły tańca zebrane w jednym miejscu specjalnie dla Ciebie. Pomożemy zaoszczędzić Twój czas już teraz.
                 Zaloguj się i zyskuj więcej!
             </p>
-            <button class="btn btn-primary" >Znajdź szkołę</button>
+            <a class="btn btn-primary" href="{{ path('szkoly_lista') }}" role="button">Znajdź szkołę</a>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 my-auto">
@@ -23,12 +23,8 @@
 
     </div>
 
-    <!--- Welcome -->
     <div class="container-fluid padding">
         <div class="row welcome text-center">
-{#            <div class="col-12">#}
-{#                <h1 class="display-4" >Dance World</h1>#}
-{#            </div>#}
             <hr>
             <div class="col-12">
                 <p class="lead"> Dowiedź się więcej o stronie: </p>
@@ -42,7 +38,7 @@
             <div class="col-sm-3 ">
                 <img src="{{ asset('illustracje/search.png') }}"  alt="dance" >
                  <h4>Znajdź szkołę</h4>
-                 <p class="text-justify">Po wejściu na stronę ze szkołami tańca jest możliwość filtrowania według wybranych kreteriów</p>
+                 <p class="text-justify">Po wejściu na stronę ze szkołami tańca jest możliwość filtrowania według wybranych kryteriów</p>
              </div>
             <div class="col-sm-3 ">
                 <img src="{{ asset('illustracje/video.png') }}"  alt="dance" >
@@ -61,27 +57,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-{#    <!--- Kontakt -->#}
-
-{#   <div class="container-fluid padding">#}
-{#       <div class="row text-center padding">#}
-{#           <div class="col-12">#}
-{#               <h4>Kontakt: </h4>#}
-{#           </div>#}
-{#           <div class="col-12 social padding">#}
-{#               <a href="#"><i class="fab fa-facebook"></i></a>#}
-{#               <a href="#"><i class="fab fa-twitter"></i></a>#}
-{#               <a href="#"><i class="fab fa-google-plus-g"></i></a>#}
-{#               <a href="#"><i class="fab fa-instagram"></i></a>#}
-{#               <a href="#"><i class="fab fa-youtube"></i></a>#}
-{#           </div>#}
-{#       </div>#}
-{#   </div>#}
-
-
 
 {% endblock %}
